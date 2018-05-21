@@ -5,7 +5,7 @@ Packer is an agnostic Image builder developed by Hasicorp
 
 ## What does this repo provide ?
 This is a work in progress collection of Packer examples to allow you to build Images within Public clouds.
-Current exaples include:
+Current examples include:
  - Windows-1
 
 ## How do I use Packer with these repos ?
