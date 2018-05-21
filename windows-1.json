@@ -1,0 +1,23 @@
+{
+"variables": {
+"aws_access_key": "YOUR-KEY-HERE",
+"aws_secret_key": "YOUR-PASS-HERE"
+},
+"builders": [{
+    "type": "amazon-ebs",
+    "region": "eu-central-1",
+    "instance_type": "t2.micro",
+    "source_ami": "ami-68052883",
+    "iam_instance_profile": "packer-s3-ro",
+    "ami_name": "packer-win-{{timestamp}}",
+    "user_data_file": "windows1-ud.txt",
+    "communicator": "winrm",
+    "winrm_username": "Administrator"
+  }],
+  "provisioners": [{
+    "type": "powershell",
+    "scripts": [
+      "windows1-install.ps1"
+    ]
+  }]
+}
