@@ -17,7 +17,7 @@ Current examples include:
 - Yes you need to create an IAM role for your new Packer instance (e.g. packer-s3-ro)
 - You also need to ensure your host running Packer has IAM rights to allow an iam:Passrole as per below: 
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
