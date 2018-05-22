@@ -13,10 +13,11 @@ Current examples include:
 - Clone this Repo then run: packer build repo-name.json (e.g. packer windows-1.json)
 - These Reops were tested with Packer v1.2.3
 
-## DO I need to do anything else ?
+## Do I need to do anything else ?
 - Yes you need to create an IAM role for your new Packer instance (e.g. packer-s3-ro)
 - You also need to ensure your host running Packer has IAM rights to allow an iam:Passrole as per below: 
 
+'''
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -30,5 +31,6 @@ Current examples include:
         }
     ]
 }
+'''
 
 - Ensure you tie the resource down to minimum requirements to fit your specific needs. 
