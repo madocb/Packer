@@ -6,7 +6,12 @@ Packer is an agnostic Image builder developed by Hasicorp
 ## What does this repo provide ?
 This is a work in progress collection of Packer examples to allow you to build Images within Public clouds.
 Current examples include:
- - Windows-1
+
+### Windows-1
+Will setup a windoes server ami and carry out the following steps:
+- Push a user-data powershell script to setup winrp, which allows Packer to connect.
+- Apply a role to the AMI to avoid the need to use hard coded username and password credentials. 
+- Run a further powershell script which installs Python, upgrades PIP, installs AWS CLI and imports files from an AWS S3 bucket.
 
 ## How do I use Packer with these repos ?
 - Install Packer on your Windows or Linux host: https://www.packer.io/docs/install/index.html
