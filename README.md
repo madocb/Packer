@@ -13,6 +13,8 @@ Will setup a windoes server ami and carry out the following steps:
 - Apply a role to the AMI to avoid the need to use hard coded username and password credentials. 
 - Run a further powershell script which installs Python, upgrades PIP, installs AWS CLI and imports files from an AWS S3 bucket.
 
+(https://github.com/madocb/Packer/blob/master/packer-diag1.jpg)
+
 ## How do I use Packer with these repos ?
 - Install Packer on your Windows or Linux host: https://www.packer.io/docs/install/index.html
 - Clone this Repo then run: packer build repo-name.json (e.g. packer windows-1.json)
