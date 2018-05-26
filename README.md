@@ -15,6 +15,11 @@ Will setup a windoes server ami and carry out the following steps:
 
 ![Alt text](https://github.com/madocb/Packer/blob/master/packer-diag1.jpg)
 
+<p align="center"> 
+<img src="packer-diag1.jpg">
+</p>
+
+
 ## How do I use Packer with these repos ?
 - Install Packer on your Windows or Linux host: https://www.packer.io/docs/install/index.html
 - Clone this Repo then run: packer build repo-name.json (e.g. packer windows-1.json)
