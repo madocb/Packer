@@ -14,7 +14,7 @@ This repo will create your own custom Windows server AMI within AWS and carry th
 - Files and binaries are copied from an AWS S3 bucket.
 
 <p align="center"> 
-<img src="packer-diag1.jpg">
+<img src="packer-diag.jpg">
 </p>
 
 ## Great, how do I create my custom AMI ?
