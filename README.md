@@ -60,4 +60,5 @@ This repo will create your own custom Windows server AMI within AWS and carry th
 
 - Ensure you set all IAM policies down to minimum requirements after testing
 
-You can tailor this to work with linux quite easily. In fact Linux AMI's are much easier to create as they don't required wimrm. Linus uses ssh and doesn't require a user-data file to set up the intial communication between packer builder host and temporary ec2 builder instance..
+You can tailor this to work with Linux quite easily. In fact Linux AMI's are much easier to create as they don't required wimrm.\
+Linux uses ssh and doesn't require a user-data file to set up the intial communication between the packer builder host and temporary ec2 builder instance.
