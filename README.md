@@ -3,30 +3,29 @@
 ## What is Packer ?
 Packer is an agnostic Image builder developed by Hasicorp.
 
-## What does this repo provide ?
-This is a work in progress collection of Packer examples to allow you to build Images within Public clouds.\
-Current examples include:
+## What can it do ?
+Packer will take an exising AWS AMI, tailor it to your needs and repackgage it as your own custom AMI.
 
-### Windows-1
-Will create your own custom windows server ami within AWS and carry the following steps:
-- Push a user-data powershell script to setup winrp, which allows Packer to connect.
-- Apply a role to the AMI to avoid the need to use hard coded username and password credentials. 
-- Run a further powershell script which installs Python, upgrades PIP, installs AWS CLI.
-- The IAM role will allow you to download files and binaries from an AWS S3 bucket.
+### What will this repo do ?
+This repo will create your own custom Windows server AMI within AWS and carry the following steps:
+- Push a user-data powershell script to setup winrp, which allows Packer to connect to windows.
+- Apply a role to the temp build instance to avoid the need to use hard coded username and password credentials. 
+- Run a further powershell script which installs Python, upgrades PIP and installs AWS CLI.
+- Files and binaries are copied from an AWS S3 bucket.
 
 <p align="center"> 
 <img src="packer-diag1.jpg">
 </p>
 
-## How do I use Packer with these repos ?
+## Great, how do I create my custom AMI ?
 - Install Packer on your Windows or Linux host: https://www.packer.io/docs/install/index.html
 - Ensure your host has a role associated to it or AWS configure is setup with appropriate permissions for iam:PassRole (See below).
 - Clone this Repo. 
-- Edit the packer file <packer>.json and modify for your region of choice and AWS AMI id.
-- Run: packer build <packer>.json (e.g. packer windows-1.json)
-- These Reops were tested with Packer v1.2.3
+- Edit the packer file windows-1.json and modify for your region of choice and AWS AMI id.
+- Run: packer build windows-1.json
+- This Reop was fully tested with Packer v1.2.3
 
-## What's this about roles ?
+## What's this about IAM roles ?
 
 - You need to ensure your host running Packer has IAM rights to allow an iam:Passrole as per below: 
 
