@@ -5,6 +5,7 @@ Packer is an agnostic Image builder developed by Hasicorp.
 
 ## What can it do ?
 Packer will take an exising AWS AMI, tailor it to your needs and repackgage it as your own custom AMI.
+In Short it will create repeatable AMI's with all your common post EC2 instance install requirments, which will lower the time your provisioning team need to get the instance ready for your Dev's.
 
 ### What will this repo do ?
 This repo will create your own custom Windows server AMI within AWS and carry the following steps:
