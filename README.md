@@ -47,4 +47,18 @@ Will create your own custom windows server ami within AWS and carry the followin
 ```
 
 - You also need to create an IAM role for your new Packer instance (e.g. packer-s3-ro) to read your S3 bucket binaries/files.
+
+```json
+{
+   "Version": "2012-10-17",
+   "Statement": [
+     {
+       "Effect": "Allow",
+       "Action": ["s3:GetObject"],
+       "Resource": ["arn:aws:s3:::<BUCKET-NAME>"]
+     }
+   ]
+ }
+```
+
 - Ensure you set all IAM policies down to minimum requirements after testing
