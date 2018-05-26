@@ -38,9 +38,7 @@ Will create your own custom windows server ami within AWS and carry the followin
             "Sid": "PackerIAMPassRole",
             "Effect": "Allow",
             "Action": "iam:PassRole",
-            "Resource": [
-                "*"
-            ]
+            "Resource": ["*"]
         }
     ]
 }
